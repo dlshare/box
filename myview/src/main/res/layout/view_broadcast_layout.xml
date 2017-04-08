@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="#fedada"
+    android:id="@+id/id_view_broadcast_layout"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <ImageView
+        android:id="@+id/id_view_broadcast_layout_icon_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:src="@drawable/common_bounced_icon_warning" />
+
+    <ImageView
+        android:id="@+id/id_view_broadcast_layout_icon_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:src="@drawable/common_bounced_icon_error" />
+
+    <TextView
+        android:id="@+id/id_view_broadcast_layout_tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/id_view_broadcast_layout_icon_right"
+        android:layout_toRightOf="@id/id_view_broadcast_layout_icon_left"
+        android:text="这里根据广播显示一些提示信息"
+        android:textColor="#fff" />
+</RelativeLayout>
+
+

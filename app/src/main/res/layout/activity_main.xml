@@ -1,18 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.box.zhangbeibei.box.MainActivity">
+    android:orientation="vertical"
+    android:padding="@dimen/normal_portrait_padding"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.box.myview.MySwitchButton.MySwitchButton
+                android:layout_width="72dp"
+                android:layout_height="32dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_corner"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/id_activity_text_my_view_btn_top_snackbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="顶部SnackBar" />
+
+                <Button
+                    android:id="@+id/id_activity_text_my_view_btn_bottom_snackbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="底部SnackBar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_corner"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/id_box"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#8080"
+                    android:gravity="center"
+                    android:text="drag me" />
+
+                <SeekBar
+                    android:id="@+id/id_stiffness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="10000"
+                    android:progress="5000" />
+
+                <SeekBar
+                    android:id="@+id/id_damping"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="50" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_corner"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#787878"
+                    android:orientation="vertical">
+
+                    <com.box.myview.MyBroadCastView.BroadCastView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:broadcastview_desc="我可以根据广播自动显示／隐藏哦"
+                        app:broadcastview_left_icon="@mipmap/ic_launcher"
+                        app:broadcastview_right_icon="@mipmap/ic_launcher" />
+
+                    <com.box.myview.MyBroadCastView.BroadCastView
+                        android:id="@+id/id_activity_test_my_view_broadcastview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:broadcastview_desc="我可以根据广播自动显示／隐藏哦"
+                        app:broadcastview_left_icon="@mipmap/ic_launcher"
+                        app:broadcastview_right_icon="@mipmap/ic_launcher" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/id_activity_test_my_view_send_update_broadcast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="点击发送应用新版本广播" />
+
+                <Button
+                    android:id="@+id/id_activity_test_my_view_send_update_broadcast_gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="点击隐藏新版本通知" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@drawable/bg_round_corner"></LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

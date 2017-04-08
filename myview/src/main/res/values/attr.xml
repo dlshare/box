@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MySwitchButton">
+        <attr name="switch_bg_color" format="color" />
+        <attr name="switch_ball_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="BroadCastView">
+        <attr name="broadcastview_left_icon" format="reference" />
+        <attr name="broadcastview_desc" format="string" />
+        <attr name="broadcastview_right_icon" format="reference" />
+    </declare-styleable>
+</resources>
